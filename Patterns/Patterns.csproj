@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B220CA2D-AE1C-4AD2-8035-6F9F50A1C326}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Patterns</RootNamespace>
+    <AssemblyName>Patterns</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.5.0.0\lib\net45\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encoding.CodePages, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encoding.CodePages.5.0.0\lib\net461\System.Text.Encoding.CodePages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BehavioralPatterns\Command\ICommand.cs" />
+    <Compile Include="BehavioralPatterns\Command\Pult.cs" />
+    <Compile Include="BehavioralPatterns\Command\TV.cs" />
+    <Compile Include="BehavioralPatterns\Command\TVOnCommand.cs" />
+    <Compile Include="BehavioralPatterns\Observer\Bank.cs" />
+    <Compile Include="BehavioralPatterns\Observer\Broker.cs" />
+    <Compile Include="BehavioralPatterns\Observer\IObservable.cs" />
+    <Compile Include="BehavioralPatterns\Observer\IObserver.cs" />
+    <Compile Include="BehavioralPatterns\Observer\Stock.cs" />
+    <Compile Include="BehavioralPatterns\Observer\StockInfo.cs" />
+    <Compile Include="BehavioralPatterns\Strategy\Car.cs" />
+    <Compile Include="BehavioralPatterns\Strategy\ElectricMove.cs" />
+    <Compile Include="BehavioralPatterns\Strategy\IMovable.cs" />
+    <Compile Include="BehavioralPatterns\Strategy\PetrolMove.cs" />
+    <Compile Include="BehavioralPatterns\TemplateMethod\Education.cs" />
+    <Compile Include="BehavioralPatterns\TemplateMethod\School.cs" />
+    <Compile Include="BehavioralPatterns\TemplateMethod\University.cs" />
+    <Compile Include="GeneratingPatterns\AbstractFactory\Arbalet.cs" />
+    <Compile Include="GeneratingPatterns\AbstractFactory\ElfFactory.cs" />
+    <Compile Include="GeneratingPatterns\AbstractFactory\FlyMovement.cs" />
+    <Compile Include="GeneratingPatterns\AbstractFactory\Hero.cs" />
+    <Compile Include="GeneratingPatterns\AbstractFactory\HeroFactory.cs" />
+    <Compile Include="GeneratingPatterns\AbstractFactory\Movement.cs" />
+    <Compile Include="GeneratingPatterns\AbstractFactory\RunMovement.cs" />
+    <Compile Include="GeneratingPatterns\AbstractFactory\Sword.cs" />
+    <Compile Include="GeneratingPatterns\AbstractFactory\VoinFactory.cs" />
+    <Compile Include="GeneratingPatterns\AbstractFactory\Weapon.cs" />
+    <Compile Include="GeneratingPatterns\Builder\Additives.cs" />
+    <Compile Include="GeneratingPatterns\Builder\Baker.cs" />
+    <Compile Include="GeneratingPatterns\Builder\Bread.cs" />
+    <Compile Include="GeneratingPatterns\Builder\BreadBuilder.cs" />
+    <Compile Include="GeneratingPatterns\Builder\Flour.cs" />
+    <Compile Include="GeneratingPatterns\Builder\RyeBreadBuilder.cs" />
+    <Compile Include="GeneratingPatterns\Builder\Salt.cs" />
+    <Compile Include="GeneratingPatterns\Builder\WheatBreadBuilder.cs" />
+    <Compile Include="GeneratingPatterns\FactoryMethod\Developer.cs" />
+    <Compile Include="GeneratingPatterns\FactoryMethod\House.cs" />
+    <Compile Include="GeneratingPatterns\FactoryMethod\PanelDeveloper.cs" />
+    <Compile Include="GeneratingPatterns\FactoryMethod\PanelHouse.cs" />
+    <Compile Include="GeneratingPatterns\Prototype\Circle.cs" />
+    <Compile Include="GeneratingPatterns\Prototype\IFigure.cs" />
+    <Compile Include="GeneratingPatterns\Prototype\Rectangle.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="GeneratingPatterns\FactoryMethod\WoodDeveloper.cs" />
+    <Compile Include="GeneratingPatterns\FactoryMethod\WoodHouse.cs" />
+    <Compile Include="StructuralPatterns\Adapter\Auto.cs" />
+    <Compile Include="StructuralPatterns\Adapter\Camel.cs" />
+    <Compile Include="StructuralPatterns\Adapter\CamelToTransportAdapter.cs" />
+    <Compile Include="StructuralPatterns\Adapter\Driver.cs" />
+    <Compile Include="StructuralPatterns\Adapter\IAnimal.cs" />
+    <Compile Include="StructuralPatterns\Adapter\ITransport.cs" />
+    <Compile Include="StructuralPatterns\Decorator\BulgerianPizza.cs" />
+    <Compile Include="StructuralPatterns\Decorator\CheesePizza.cs" />
+    <Compile Include="StructuralPatterns\Decorator\ItalianPizza.cs" />
+    <Compile Include="StructuralPatterns\Decorator\Pizza.cs" />
+    <Compile Include="StructuralPatterns\Decorator\PizzaDecorator.cs" />
+    <Compile Include="StructuralPatterns\Decorator\TomatoPizza.cs" />
+    <Compile Include="StructuralPatterns\Facade\CLR.cs" />
+    <Compile Include="StructuralPatterns\Facade\Compiller.cs" />
+    <Compile Include="StructuralPatterns\Facade\Programmer.cs" />
+    <Compile Include="StructuralPatterns\Facade\TextEditor.cs" />
+    <Compile Include="StructuralPatterns\Facade\VisualStudioFacade.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="BehavioralPatterns\Command\TextFile1.txt" />
+    <Content Include="BehavioralPatterns\Observer\TextFile1.txt" />
+    <Content Include="BehavioralPatterns\Strategy\TextFile1.txt" />
+    <Content Include="BehavioralPatterns\TemplateMethod\TextFile1.txt" />
+    <Content Include="GeneratingPatterns\AbstractFactory\TextFile1.txt" />
+    <Content Include="GeneratingPatterns\Builder\TextFile1.txt" />
+    <Content Include="GeneratingPatterns\FactoryMethod\TextFile1.txt" />
+    <Content Include="GeneratingPatterns\Prototype\TextFile1.txt" />
+    <Content Include="StructuralPatterns\Adapter\TextFile1.txt" />
+    <Content Include="StructuralPatterns\Decorator\TextFile1.txt" />
+    <Content Include="StructuralPatterns\Facade\TextFile1.txt" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+</Project>
